@@ -47,8 +47,9 @@ public class MainActivity extends AppCompatActivity {
                         ePassword.setError("Invalid password");
                     }else{
                         //Add the code to go to new activity
-                        Intent intent = new Intent(MainActivity.this, HomePageActivity.class);
-                        startActivity(intent);
+//                        Intent intent = new Intent(MainActivity.this, HomePageActivity.class);
+//                        startActivity(intent);
+                        nextActivity(v);
                     }
                 }
 
@@ -63,4 +64,8 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
+    public void nextActivity(View view){
+        Intent intent = HomePageActivity.getIntent(getApplicationContext(), "Welcome!! din_djarin" );
+        startActivity(intent);
+    }
 }
