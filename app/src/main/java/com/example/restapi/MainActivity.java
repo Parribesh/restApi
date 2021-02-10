@@ -15,10 +15,18 @@ public class MainActivity extends AppCompatActivity {
     private EditText eName;
     private EditText ePassword;
     private Button eLogin;
-    private TextView eAttempsInfo;
+    private static String Username = "din_djarin";
+    private static String Password = "baby_yoda_ftw";
 
-    private String Username = "din_djarin";
-    private String Password = "baby_yoda_ftw";
+
+    public static String getUsername() {
+        return Username;
+    }
+
+    public static String getPassword() {
+        return Password;
+    }
+
 
     boolean isValid = false;
 
